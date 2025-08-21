@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieDB - Track Movies & TV Shows</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">MovieDB</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active" data-type="movie">Movies</a></li>
+                    <li><a href="#" data-type="tv">TV Shows</a></li>
+                    <li class="dropdown">
+                        <a href="#">Categories <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <h4>Movies</h4>
+                                <a href="#" data-type="movie" data-category="popular">Popular</a>
+                                <a href="#" data-type="movie" data-category="top_rated">Top Rated</a>
+                                <a href="#" data-type="movie" data-category="upcoming">Upcoming</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h4>TV Shows</h4>
+                                <a href="#" data-type="tv" data-category="popular">Popular</a>
+                                <a href="#" data-type="tv" data-category="top_rated">Top Rated</a>
+                                <a href="#" data-type="tv" data-category="on_the_air">On TV</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search for a movie, tv show, person...">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome.</h1>
+            <p>Millions of movies, TV shows and people to discover. Explore now.</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 id="content-title">What's Popular</h2>
+                <div class="tabs">
+                    <button class="tab active" data-category="popular">Streaming</button>
+                    <button class="tab" data-category="on_the_air">On TV</button>
+                    <button class="tab" data-category="upcoming">For Rent</button>
+                    <button class="tab" data-category="now_playing">In Theaters</button>
+                </div>
+            </div>
+
+            <div class="movie-grid" id="movie-grid">
+                <!-- Movie cards will be inserted here by JavaScript -->
+            </div>
+
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="movie-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Movie details will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
